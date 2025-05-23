@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: heart-heal-ai
+    env: python
+    buildCommand: ""
+    startCommand: "gunicorn src.main:app"
+    envVars:
+      - key: FLASK_ENV
+        value: production
